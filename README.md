@@ -70,29 +70,29 @@ Por fim, o script inicia o listener do Meterpreter, configurando a porta de escu
 
 ## Comandos específicos para Android
 
--activity_start: Inicia uma atividade Android a partir de uma string Uri.
+- activity_start: Inicia uma atividade Android a partir de uma string Uri.
 
--check_root: Verifica se o dispositivo Android é root.
+- check_root: Verifica se o dispositivo Android é root.
 
--dump_calllog: Obtém o histórico de chamadas.
+- dump_calllog: Obtém o histórico de chamadas.
 
--dump_contacts: Obtém a lista de contatos.
+- dump_contacts: Obtém a lista de contatos.
 
--dump_sms: Obtém as mensagens SMS.
+- dump_sms: Obtém as mensagens SMS.
 
--geolocate: Obtém a localização atual usando geolocalização.
+- geolocate: Obtém a localização atual usando geolocalização.
 
--hide_app_icon: Oculta o ícone do aplicativo do lançador.
+## (esse é bom) hide_app_icon: Oculta o ícone do aplicativo do lançador.
 
--interval_collect: Gerencia a coleta de dados em intervalos.
+- interval_collect: Gerencia a coleta de dados em intervalos.
 
--send_sms: Envia SMS do dispositivo alvo.
+- send_sms: Envia SMS do dispositivo alvo.
 
--sqlite_query: Consulta um banco de dados SQLite no armazenamento.
+- sqlite_query: Consulta um banco de dados SQLite no armazenamento.
 
--wakelock: Habilita ou desabilita o Wakelock.
+- wakelock: Habilita ou desabilita o Wakelock.
 
--wlan_geolocate: Obtém a localização usando informações de WLAN.
+- wlan_geolocate: Obtém a localização usando informações de WLAN.
 
 
 ## Iniciar coleta de Wi-Fi:
