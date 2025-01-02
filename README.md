@@ -58,6 +58,7 @@ cd automacao-apk-metasploit</code></pre>
 
 <p>Recompile o APK:</p>
 <pre><code>apktool b Brunao</code></pre>
+<p>Vá em  AndroidManifest.xml cole o codigo, jogue no chat gpt e mande atualiza para o Android 13 ou mais recente</p>
 
 <p>Alinhe o APK com o comando:</p>
 <pre><code>zipalign -v 4 Brunao.apk Brunao.apk</code></pre>
