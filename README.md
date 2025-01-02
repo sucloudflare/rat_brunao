@@ -1,5 +1,7 @@
 <h1>Automatização de Geração de APK com Payload Meterpreter e Exploração com Metasploit</h1>
-<p>Este projeto automatiza o processo de criação de um APK malicioso com o payload Meterpreter para Android, utilizando o <code>msfvenom</code>, e fornece instruções para modificar o <code>AndroidManifest.xml</code> para compatibilidade com Android 13. O script também inicia automaticamente o listener no Metasploit para capturar a conexão do dispositivo alvo.</p>
+<p>Este projeto automatiza o processo de criação de um APK malicioso com o payload Meterpreter para Android, utilizando o <code>msfvenom</code>, e fornece instruções para modificar o <code>AndroidManifest.xml</code> para compatibilidade com Android 13. O script também inicia automaticamente o listener no Metasploit para capturar a conexão do dispositivo alvo.
+    (    OU SEJA ELE PEGA SEU IP COM IPCONFIG BOTA NO LHOST GERAR O PAYLOAD E DEPOIS EXECUTAR O METERPRETE AUTOMATICO )
+</p>
 
 <h2>Requisitos</h2>
 <ul>
@@ -17,7 +19,7 @@
 
 <p>Instale o ApkTool:</p>
 <ul>
-<li>Baixe o ApkTool <a href="https://github.com/iBotPeaches/Apktool" target="_blank">aqui</a>.</li>
+<li>Baixe o ApkTool para atualizar para o Android 13 <a href="https://github.com/iBotPeaches/Apktool" target="_blank">aqui</a>.</li>
 <li>Siga as instruções para a instalação no seu sistema.</li>
 </ul>
 
@@ -77,3 +79,20 @@ cd automacao-apk-metasploit</code></pre>
 <div class="footer">
 <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
 </div>
+
+
+Exemplo de Execução
+Obter o IP da máquina: O script encontra o IP privado e o exibe.
+
+Gerar o APK: O script gera o APK malicioso com o msfvenom.
+
+Atualizar o AndroidManifest.xml: O script fornece as instruções para editar o AndroidManifest.xml para Android 13.
+
+Iniciar o Listener: O script inicia o listener do Metasploit e exibe:
+
+Copiar código
+Iniciando o Metasploit... Aguarde.
+Sessão meterpreter iniciada.
+Exibir Comandos: O script exibe os comandos disponíveis, como "executar" e "help".
+
+<h1>Leia a msg que tá no terminal acima da execução do payload sobre a atualização para o android 13</h1>
