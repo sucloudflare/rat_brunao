@@ -82,7 +82,7 @@ Por fim, o script inicia o listener do Meterpreter, configurando a porta de escu
 
 - geolocate: Obtém a localização atual usando geolocalização.
 
-<strong> (esse é bom) - hide_app_icon: Oculta o ícone do aplicativo do lançador.</strong>
+(esse é bom) - hide_app_icon: Oculta o ícone do aplicativo do lançador.
 
 - interval_collect: Gerencia a coleta de dados em intervalos.
 
