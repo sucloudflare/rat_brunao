@@ -12,7 +12,7 @@ Este script foi desenvolvido para automatizar várias etapas de testes e manipul
 ## Funcionalidades
 
 ### 1. Atualização do Metasploit Framework
-O script começa atualizando o Metasploit Framework para garantir que você esteja usando a versão mais recente. Durante a execução, ele verifica a versão instalada e a atualiza automaticamente se necessário.
+O script começa atualizando o Metasploit Framework e seu Linux todo para garantir que você esteja usando a versão mais recente. Durante a execução, ele verifica a versão instalada e a atualiza automaticamente se necessário.
 
 ### 2. Geração do Payload Android
 O script gera um payload para Android e o salva como um arquivo APK, pronto para ser utilizado em testes de segurança.
