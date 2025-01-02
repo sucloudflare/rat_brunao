@@ -115,7 +115,7 @@ interval_collect -a dump -c cell
 ## (depois que instala o apk use sempre esse) Se você quiser iniciar o listener manualmente, execute o seguinte comando no terminal:
 
 
-msfconsole
+        msfconsole
 
 
 ## E, após carregar o Metasploit, configure o listener com o comando:
@@ -133,12 +133,12 @@ Troque [IP_LOCAL] pelo seu IP local e [PORTA] pela porta que você configurou (c
 ## se querer gerar de novo o apk apague os arquivos como pastas e apk's gerado
 
 use: 
-       sudo rm -rf Brunao_kyti
-       sudo rm -rf brunao_kyti
-       sudo rm -rf brunao_kyti.apk
-       sudo rm -rf brunao_kyti_final.apk
-       sudo rm -rf brunao_kyti_signed.apk
+               sudo rm -rf Brunao_kyti
+               sudo rm -rf brunao_kyti
+               sudo rm -rf brunao_kyti.apk
+               sudo rm -rf brunao_kyti_final.apk
+               sudo rm -rf brunao_kyti_signed.apk
 
 
-## depois de gerar o apk instaler o brunao_kyti_final.apk, guarde e use o msconsole. 
+## depois de gerar o apk instaler o brunao_kyti_final.apk, guarde e use o msfconsole. 
 
