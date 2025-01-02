@@ -54,11 +54,11 @@ cd automacao-apk-metasploit</code></pre>
 <p>Após gerar o APK, você precisa modificar o <code>AndroidManifest.xml</code> para Android 13. Para isso, execute:</p>
     <pre><code>apktool d Brunao.apk</code></pre>
 
-<p>Abra o arquivo <code>AndroidManifest.xml</code> dentro da pasta descompilada e adicione as permissões necessárias para Android 13.</p>
+<p>Abra o arquivo <code>AndroidManifest.xml</code> dentro da pasta descompilada e adicione as permissões necessárias para Android 13 ou mais recente com o chat gpt, causo não saiba.</p>
 
 <p>Recompile o APK:</p>
 <pre><code>apktool b Brunao</code></pre>
-<p>Vá em  AndroidManifest.xml cole o codigo, jogue no chat gpt e mande atualiza para o Android 13 ou mais recente</p>
+
 
 <p>Alinhe o APK com o comando:</p>
 <pre><code>zipalign -v 4 Brunao.apk Brunao.apk</code></pre>
