@@ -134,9 +134,13 @@ Troque [IP_LOCAL] pelo seu IP local e [PORTA] pela porta que você configurou (c
 
 use: 
                sudo rm -rf Brunao_kyti
+               
                sudo rm -rf brunao_kyti
+               
                sudo rm -rf brunao_kyti.apk
+
                sudo rm -rf brunao_kyti_final.apk
+               
                sudo rm -rf brunao_kyti_signed.apk
 
 
