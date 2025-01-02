@@ -56,6 +56,7 @@ Por fim, o script inicia o listener do Meterpreter, configurando a porta de escu
     ```bash
     sudo python3 brunao.py -r
     ```
+  <h2>Quando tudo tiver compilado vai pedir uma senha: password</h2>
 
     O script vai iniciar o processo automaticamente e pedirá que você forneça as informações necessárias, como a porta (LPORT).
 
