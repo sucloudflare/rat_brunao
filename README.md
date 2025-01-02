@@ -130,7 +130,7 @@ interval_collect -a dump -c cell
         
 Troque [IP_LOCAL] pelo seu IP local e [PORTA] pela porta que você configurou (como a porta 4444).
 
-## Se querer gerar um novo o apk(payload) apague os arquivos já existente como as pastas e apk's gerado
+## Se quiser gerar um novo o apk(payload) apague os arquivos já existente como as pastas e apk's gerado
 
 use: 
                sudo rm -rf Brunao_kyti
