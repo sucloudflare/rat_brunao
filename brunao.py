@@ -40,6 +40,7 @@ def update_manifest():
     print("2. Abra o terminal na pasta onde o APK foi gerado e execute o comando:")
     print("   apktool d Brunao.apk")
     print("3. Abra o arquivo 'AndroidManifest.xml' na pasta 'Brunao' gerada e modifique as permissões necessárias para Android 13.")
+    print("3.1. Pegue o codigo e mande o chat-gpt atualizar"
     print("4. Após modificar, execute o comando:")
     print("   apktool b Brunao")
     print("5. Em seguida, utilize o comando para alinhar o APK:")
