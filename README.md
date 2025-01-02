@@ -133,6 +133,8 @@ Troque [IP_LOCAL] pelo seu IP local e [PORTA] pela porta que você configurou (c
 ## Se quiser gerar um novo o apk(payload) apague os arquivos já existente como as pastas e apk's gerado
 
 use: 
+               
+               
                sudo rm -rf Brunao_kyti
                
                sudo rm -rf brunao_kyti
