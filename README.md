@@ -130,7 +130,7 @@ interval_collect -a dump -c cell
         
 Troque [IP_LOCAL] pelo seu IP local e [PORTA] pela porta que você configurou (como a porta 4444).
 
-## se querer gerar um novo o apk(payload) apague os arquivos já existente como as pastas e apk's gerado
+## Se querer gerar um novo o apk(payload) apague os arquivos já existente como as pastas e apk's gerado
 
 use: 
                sudo rm -rf Brunao_kyti
@@ -144,5 +144,5 @@ use:
                sudo rm -rf brunao_kyti_signed.apk
 
 
-## depois de gerar o apk instaler o brunao_kyti_final.apk, guarde e use o msfconsole. 
+## Depois de gerar o apk instaler o brunao_kyti_final.apk, guarde e use o msfconsole. 
 
